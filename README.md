@@ -51,7 +51,7 @@ WinFormsBarcodeScannerApp/
 ### 1. 克隆项目
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/hylir-systems/WinFormsBarcodeScannerApp.git
 cd WinFormsBarcodeScannerApp
 ```
 
