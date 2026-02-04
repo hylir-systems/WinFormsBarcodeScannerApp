@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>WinFormsBarcodeScannerApp</RootNamespace>
+    <AssemblyName>WinFormsBarcodeScannerApp</AssemblyName>
+    <ApplicationIcon>windows.ico</ApplicationIcon>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <StartupObject>WinFormsBarcodeScannerApp.Program</StartupObject>
+    <UseWindowsForms>True</UseWindowsForms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="windows.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- AForge (需要安装 NuGet 包) -->
+    <PackageReference Include="AForge.Video" Version="2.2.5" />
+    <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
+    <PackageReference Include="Aspose.Drawing.Common" Version="25.12.0" />
+    <PackageReference Include="Emgu.CV" Version="4.12.0.5764" />
+    <PackageReference Include="Emgu.CV.Bitmap" Version="4.12.0.5764" />
+    <PackageReference Include="Emgu.CV.runtime.windows" Version="4.12.0.5764" />
+    <!-- Emgu.CV 原生运行时支持 (必须) -->
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="asserts\Aspose.Total.NET.lic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="asserts\success.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="windows.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Aspose.BarCode">
+      <HintPath>..\..\..\..\software\Aspose.Barcode for .NET v25.12.0\lib\net10.0\Aspose.BarCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

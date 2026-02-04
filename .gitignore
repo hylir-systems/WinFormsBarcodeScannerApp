@@ -1,0 +1,41 @@
+# .NET / Visual Studio 通用忽略规则
+
+## Build results
+[Tt]ool[Bb]uild/
+[Bb]in/
+[Oo]bj/
+
+## Visual Studio 缓存
+.vs/
+.idea/
+*.user
+*.userosscache
+*.suo
+
+## NuGet 包
+packages/
+!packages.config
+
+## 项目特定输出
+[Aa]4/
+[Aa]4/*/
+logs/
+logs/*.log
+
+## 测试结果
+[Nn]Unit/[Bb]uild/
+[Vv]ision_Test/[Bb]uild/
+[Oo]ut/
+
+## 其他
+*.cache
+*.tmp
+*.temp
+*.bak
+*~
+Thumbs.db
+.DS_Store
+
+## 证书和许可证文件（根据需求决定是否忽略）
+# *.lic
+
